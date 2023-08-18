@@ -1,38 +1,17 @@
-.App {
-  text-align: center;
-}
+@import "./utils/variables.scss";
+@import "./utils/functions.scss";
+@import "./utils/mixins.scss";
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+@import "./base/base.scss";
+@import "./base/typography.scss";
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
+//@import "./components/header.scss";
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
+@import "./layouts/banner.scss";
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+@import "./pages/home.scss";
+//@import "./pages/about.scss";
+//@import "./pages/offers.scss";
+//@import "./pages/error.scss";

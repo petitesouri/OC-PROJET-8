@@ -1,0 +1,5 @@
+.banner {
+    @include mixin-banner;
+    background: url("/assets/Home-banner.jpg"), lightgray -5.076px -524px / 100.819% 226.723%;
+    // ajouter l'opacitée de 0.3, background black
+}
