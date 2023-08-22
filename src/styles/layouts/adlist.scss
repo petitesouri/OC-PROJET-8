@@ -1,0 +1,15 @@
+.ad-list-container {
+    width: 1240px;
+    height: 829px;
+    background-color: $second-color;
+    border-radius: 25px;
+    padding: 50px;
+    margin: 3px 100px;
+    overflow: scroll;
+    .ad-list {
+        display: grid; 
+        grid-template-columns: 1fr 1fr 1fr;
+        column-gap: 60px;
+        row-gap: 50px;
+    }
+}
