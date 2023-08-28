@@ -1,33 +1,43 @@
-import { useState, useEffect } from "react";
-//import useFetch from "react-fetch-hook";
+import { useState, useEffect } from 'react'
+//import {Link} from "react-router-dom";
 
-//import Card from './Card'
+import Card from './Card'
+
+
 
 function AdList() {
+
+  const [data, updateData] = useState({})
+  const [fetchState, setFetch] = useState(false) 
+
   useEffect(() => {
-    async function fetchAd () {
-      const response = await fetch("https://github.com/petitesouri/OC-PROJET-8/blob/main/public/datas/ad.json")
-      const datas = await response.json()
-
-      //const testUseState = useState(0);
-
-      return (
-        //console.log(testUseState),
-        console.log(datas)
-        /*<div>
-          <h1>Test </h1>
-          {adList.map((profile, id) => (
-            <Card
-              key={profile.id}
-              title={profile.title}
-              name={profile.name}
-            />
-          ))}
-        </div>*/
-      )
+    const fetchData = async () => {
+      const response = await fetch (`http://localhost:3000/datas/ad.json`)
+      const data = await response.json()
+      updateData(data)
     }
-    fetchAd() 
+    fetchData()
+    setFetch(true)
   }, [])
+
+  const arrayData = Array.from(data)
+
+  return (
+    <div className='ad-list-container'>
+      <ul className='ad-list'>
+        {arrayData.map((ad, id) => (
+          <div key={ id } className="card">
+            {/*<Card title= { ad.title }>*/}
+            <Card>
+              <span>
+                Titre de la location
+              </span>
+            </Card>
+          </div>
+        ))}
+      </ul>
+    </div>
+  )
 }
 
 export default AdList;

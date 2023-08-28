@@ -1,18 +1,11 @@
-import PropTypes from 'prop-types'
-
-function Card({ id, name, title }) {
+const Card = (props) => {
   return (
-    <div>
-        <span>{id}</span>
-        <span>{name}</span>
-        <span>{title}</span>
-    </div>
+    console.log(props),
+    <li>
+         { props.title }
+         { props.children }
+    </li>
   )
 }
 
-Card.propTypes = {
-  name: PropTypes.string,
-  title: PropTypes.string,
-}
-
-export default Card
+export default Card;
