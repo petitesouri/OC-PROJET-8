@@ -6,8 +6,9 @@ const APropos = () => {
     return (
         <div className="about">
             <Header />
-            <Banner/>
-            <h2>A Propos </h2>  
+            <Banner>
+                <img src={require('../assets/APropos-banner.png')} alt="banniere accueil"></img> 
+            </Banner>             
             <Footer />   
         </div>
     )

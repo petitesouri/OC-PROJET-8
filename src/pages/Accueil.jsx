@@ -7,7 +7,9 @@ const Accueil = () => {
     return (
         <div className="home">
             <Header />
-            <Banner/>
+            <Banner title="Chez vous, partout et ailleurs">  
+                <img src={require('../assets/Home-banner.jpg')} alt="banniere accueil"></img>
+            </Banner>
             <AdList />
             {
                 // Map sur les donées

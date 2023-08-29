@@ -1,7 +1,5 @@
-import {Link} from "react-router-dom";
+import {Link, NavLink} from "react-router-dom";
 import logo from '../assets/LOGO.jpg';
-
-import Nav from './Nav';
 
 const Header = () => {
     return (
@@ -9,7 +7,10 @@ const Header = () => {
             <Link to="/">
                 <img src={logo} alt="logo" className="logo"/>
             </Link>
-            <Nav/>
+            <nav className="nav">
+                <NavLink to="/">Accueil</NavLink>
+                <NavLink to="/Apropos">A Propos</NavLink>
+            </nav>
         </header>
     )
 }
