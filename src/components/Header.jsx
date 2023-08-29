@@ -1,15 +1,16 @@
 import {Link} from "react-router-dom";
+import logo from '../assets/LOGO.jpg';
 
 import Nav from './Nav';
 
 const Header = () => {
     return (
-        <div className="header">
+        <header className="header">
             <Link to="/">
-                <img src={require('../assets/LOGO.jpg')} alt="logo" className="logo"/>
+                <img src={logo} alt="logo" className="logo"/>
             </Link>
             <Nav/>
-        </div>
+        </header>
     )
 }
 

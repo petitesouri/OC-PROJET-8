@@ -1,9 +1,11 @@
+import Logo from '../assets/LOGO-black.png'
+
 const Footer = () => {
     return (
-        <div className="footer">
-            <img src={require('../assets/LOGO-black.png')} alt="logo" className="logo"/>
+        <footer className="footer">
+            <img src={ Logo } alt="logo" className="logo"/>
             <p>© 2020 Kasa. All rights reserved</p>
-        </div>
+        </footer>
     )
 }
 

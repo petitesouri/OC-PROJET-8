@@ -1,17 +1,14 @@
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-//import Card from "../components/Card";
-import useFetch from "../components/useFetch";
 
-const Offers = () => {
-    
+const Erreur = () => {
     return (
         <div>
             <Header />
-            { useFetch () }
+            <h2>Erreur 404</h2>
             <Footer />            
         </div>
     )
 }
 
-export default Offers;
+export default Erreur;

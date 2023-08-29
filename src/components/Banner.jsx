@@ -1,5 +1,6 @@
 import '../assets/Home-banner.jpg'
 
+// utilisation de banner pour afficher aussi celle de la page a propos
 const Banner = () => {
     return (
         <div className="banner">

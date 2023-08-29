@@ -1,9 +1,12 @@
 const Card = (props) => {
+
   return (
-    console.log(props),
     <li>
-         { props.title }
-         { props.children }
+      { props.cover }
+      { props.title }
+      { props.location }
+      { props.description }
+      { props.children}
     </li>
   )
 }
