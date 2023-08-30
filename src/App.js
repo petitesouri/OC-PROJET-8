@@ -3,7 +3,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 
 import Accueil from "./pages/Accueil";
 import APropos from "./pages/Apropos";
-import Location from "./pages/Location";
+import Logement from "./pages/Logement";
 import Erreur from "./pages/Erreur404";
 
 function App() {
@@ -13,8 +13,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Accueil/>} />
           <Route path="/Apropos" element={<APropos/>} />
-          <Route path="/Location" element={<Location/>} />
-          <Route path="/erreur" element={<Erreur/>} />
+          <Route path="/Logement" element={<Logement/>} />
+          <Route path="*" element={<Erreur/>} />
         </Routes>
       </BrowserRouter>
     </div>

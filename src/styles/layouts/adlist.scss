@@ -2,12 +2,9 @@
     width: 1240px;
     background-color: $second-color;
     border-radius: 25px;
-    .ad-list {
-        width: 100%;
-        display: grid; 
-        grid-template-columns: 1fr 1fr 1fr;
-        column-gap: 60px;
-        row-gap: 50px;
-        padding: 43px 50px 28px 50px;
-    }
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 60px;
+    row-gap: 50px;
+    padding: 43px 50px 28px 50px;
 }

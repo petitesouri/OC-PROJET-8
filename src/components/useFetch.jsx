@@ -1,34 +1,21 @@
 import { useEffect, useState } from 'react';
 
-function useFetch(url) {
+function useFetch() {
 
-  const [data, setData] = useState({});
-  //const [loading, setLoading] = useState(false);
+  const [data, setData] = useState([]);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
       const fetchData = async () => {
-          //setLoading(true);
           const response = await fetch(`http://localhost:3000/datas/ad.json`);
           const datas = await response.json();
           setData(datas);
-          //setLoading(false);
+          setLoading(true);
       }
       fetchData();
-  }, [])
-
-  const arrayData = Array.from(data)
-
-  if ( document.URL === 'http://localhost:3000/') {
-    return (
-      <ul className='ad-list'>
-        {arrayData.map((ad, id) => (
-          <div key={ id } id={ id } className="card">
-              { ad.title }
-          </div>
-        ))}
-      </ul>
-    )
-  }
-}       
+  }, [loading])
+  
+    return ( data)
+}  
 
 export default useFetch;
