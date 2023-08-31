@@ -1,18 +1,38 @@
-* {
-    box-sizing: border-box;
+* { 
+    box-sizing: border-box;   
 }
-
-body {
+#root {
     margin: 0;
-    padding: 0;
-    background-color: white;
 }
-
+body, header, footer, main, .page, .erreur404, .erreur404__section,
+.banner, .collapse-list, .collapse-up, .collapse-up__button {
+    display: flex;
+    flex-direction: column; 
+} 
+body, header, main {
+    margin: auto;
+}
+body {
+    max-width: 1440px;
+    background-color: white;
+    justify-content: center;
+    margin: auto;
+    .page {
+        gap: 38px;
+        margin-top: 45px;
+    }
+    header, main {
+        width: 1240px;
+    }
+    main {
+        min-height: 70vh;
+        flex: 2 1vh;
+    }
+}
 ul {
     list-style-type: none;
     padding-inline-start: 0;
 }
-
 img {
     object-fit: contain;
 }

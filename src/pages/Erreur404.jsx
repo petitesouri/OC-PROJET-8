@@ -4,15 +4,17 @@ import Footer from "../components/Footer";
 
 const Erreur = () => {
     return (
-        <div className="erreur404">
+        <div className="page">
             <Header />
-            <section>
-                <h2>404</h2>
-                <p>Oups! La page que vous demandez n'existe pas.</p>
-                <Link to="/">
-                    Retourner sur la page d'accueil
-                </Link>
-            </section>
+            <main className="erreur404">
+                <section className="erreur404__section">
+                    <h2>404</h2>
+                    <p>Oups! La page que vous demandez n'existe pas.</p>
+                    <Link to="/">
+                        Retourner sur la page d'accueil
+                    </Link>
+                </section>
+            </main>
             <Footer />            
         </div>
     )

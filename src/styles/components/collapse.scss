@@ -1,13 +1,11 @@
 .collapse {
-    width: 1023px; 
     background-color: $second-color;
     border-radius: 10px;
-    margin:auto;
     .collapse-up {
         height: 52px;
         background-color: $main-color;
         border-radius: 10px;
-        display: flex;
+        flex-direction: row;
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px 10px 15px;
@@ -18,12 +16,6 @@
         &__button {
             background-color: $main-color;
             border: none;
-            display: flex;
-            align-items: center;
-            //transition: all;
-            :active {
-                animation: rotate-button 150ms linear forwards reverse;
-            }
         }
     }
     .collapse-down {
@@ -33,4 +25,7 @@
         padding: 16px 20px 20px 20px;
         margin: 0;
     }
+}
+.collapse-up__button :active {
+        animation: rotate-button 150ms linear reverse;
 }

@@ -8,16 +8,14 @@ import Erreur from "./pages/Erreur404";
 
 function App() {
   return (
-    <div className="App">
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Accueil/>} />
-          <Route path="/Apropos" element={<APropos/>} />
-          <Route path="/Logement" element={<Logement/>} />
-          <Route path="*" element={<Erreur/>} />
-        </Routes>
-      </BrowserRouter>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Accueil/>} />
+        <Route path="/Apropos" element={<APropos/>} />
+        <Route path="/Logement" element={<Logement/>} />
+        <Route path="*" element={<Erreur/>} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 

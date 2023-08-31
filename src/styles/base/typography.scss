@@ -1,3 +1,6 @@
+*{
+    line-height: 142%;
+}
 body, h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
@@ -9,11 +12,22 @@ h1 {
     font-size: 48px;
     letter-spacing: 10px;
 }
+h2 {
+    font-size: 185px;
+    font-weight: 700;
+}
+p {
+    font-size: 36px;
+}
 a{
     color: $main-color;
     font-size: 24px;
     text-decoration: none;
+    margin: 0;
     &:active {
         text-decoration: underline;
+    }
+    img{
+        height: 64px;
     }
 }

@@ -1,28 +1,17 @@
 .erreur404 {    
-    display: flex;
-    flex-direction: column;
     align-items: center;
-    section {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
+    padding-top: 101px;
+    padding-bottom: 101px;
+    &__section {
         align-items: center;
         gap: 139px;
-        margin-bottom: 139px;
         h2, p {
             color: $main-color;
-        }
-        h2 {
-            font-size: 288px;
-            font-weight: 700;
             margin: 0;
-        }
-        p {
-            font-size: 36px;
         }
         a {
             font-size: 18px;
             text-decoration: underline;
-        }
-    }   
+        }   
+    }
 }

@@ -10,9 +10,11 @@ const Logement = () => {
     // Si tu trouves le logement > Tu affiches les infos
     
     return (
-        <div>
+        <div className="page">
             <Header />
-            <Card />
+            <main>
+                <Card />
+            </main>
             <Footer />            
         </div>
     )
