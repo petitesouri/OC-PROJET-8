@@ -1,3 +1,47 @@
-//.home{
-//    margin: 12px auto 5px;
-//}
+.logement {
+    .logement-section {
+        .logement-item {
+            .card--logement {
+                color: black;
+                background-image: none;
+            }
+            .carousel {
+                display: flex;
+                flex-direction: row;
+                //overflow: hidden;
+                .carousel-pictures{ 
+                    img{
+                        height: 415px;
+                        border-radius: 25px;
+                        object-fit: cover;
+                    }
+                }
+                .carousel-pictures__hidden {
+                    display: none;
+                }
+                .arrow{
+                    background-color:black;
+                    position: absolute;
+                }
+                .arrow-left {
+                    left: 1rem;
+                    top: 500px;
+                }
+                .arrow-right {
+                    right: 1rem;
+                    top: 500px;
+                }
+                .indicator {
+                    width: 100px;
+                    height: 100px;
+                    color: black;
+                    background-color: blue;
+                    display: flex;
+                    position: absolute;
+                    bottom: 100px;
+                    left: 700px;
+                }
+            }
+        }
+    }
+}

@@ -1,13 +1,9 @@
-import Header from "../components/Header";
 import Banner from '../components/Banner';
-import Footer from "../components/Footer";
 import Collapse from "../components/Collapse";
 
 const APropos = () => {
     return (
-        <div className="page">
-            <Header />
-            <main className="about">
+            <main className="page about">
                 <Banner>
                     <img src={require('../assets/APropos-banner.png')} alt="banniere accueil"></img> 
                 </Banner>
@@ -40,9 +36,7 @@ const APropos = () => {
                         Nous organisons également des ateliers sur la sécurité domestique pour nos hôtes."
                     />
                 </section>
-            </main>
-            <Footer />   
-        </div>
+            </main>  
     )
 }
 

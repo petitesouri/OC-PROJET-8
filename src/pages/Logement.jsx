@@ -1,22 +1,50 @@
-import Header from "../components/Header";
-import Footer from "../components/Footer";
+import { useParams } from "react-router-dom";
+import useFetch from '../components/useFetch'
+
 import Card from "../components/Card";
+import Slideshow from "../components/Slideshow";
+{/*import Collapse from "../components/Collapse";
+import Tags from "../components/Tags";
+import Host from "../components/Host";
+import Rating from "../components/Rating";*/}
 
 const Logement = () => {
-    // Tu récupères l'id dans l'url
-    // Tu fais un fetch de ton json
-    // Tu vérifie si tu trouves un logement qui correspond à cet ID
-    // Si ce n'est pas le cas > Tu renvoies une erreur 404
-    // Si tu trouves le logement > Tu affiches les infos
-    
+    const { id } = useParams();
+    const datasJson = useFetch();
+
     return (
-        <div className="page">
-            <Header />
-            <main>
-                <Card />
-            </main>
-            <Footer />            
-        </div>
+        <main className="page logement">
+            {datasJson.map ( (cardById) => (
+                <section className="logement-section" key={cardById.id} >
+                    {cardById.id === id ? 
+                        <div className="logement-item">
+                            <Slideshow 
+                            data={cardById.pictures}
+                            />
+                            <Card 
+                                title={cardById.title} 
+                                location={cardById.location}                            
+                                /> 
+                            {/*<Tags tags={cardById.tags} />
+                            <Host 
+                                name={cardById.host.name}
+                                picture={cardById.host.picture}
+                                />
+                            <Rating 
+                                rating={cardById.rating}/>
+                            <Collapse 
+                                title="Description"
+                                paragraph= {cardById.description}
+                            />
+                            <Collapse 
+                                title="Equipements"
+                                paragraph= {cardById.equipments}
+                            />*/}
+                        </div> : null
+                    }
+                </section>
+            ))}
+        </main>
     )
 }
 
