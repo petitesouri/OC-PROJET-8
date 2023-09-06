@@ -1,9 +1,0 @@
-.banner {
-  height: 223px;
-  background: url("/assets/Home-banner.jpg"), lightgray -5.076px -524px/100.819% 226.723% no-repeat;
-  background-size: cover;
-}
-.banner h1 {
-  display: flex;
-  align-items: center;
-}/*# sourceMappingURL=banner.css.map */

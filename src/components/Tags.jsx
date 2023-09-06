@@ -1,11 +1,8 @@
 const Tags = (props) => {  
     return (
-      <li 
-            key={ props.id }
-            className="tags"
-            >
-        <div>{ props.tags }</div>
-      </li>
+      <ul key={ props.id } className="tags">
+        <li className="tags-item">{ props.tags }</li>
+      </ul>
     )
   }
   

@@ -1,11 +1,13 @@
 import Banner from '../components/Banner';
 import Collapse from "../components/Collapse";
 
+import AboutBanner from '../assets/APropos-banner.png';
+
 const APropos = () => {
     return (
             <main className="page about">
                 <Banner>
-                    <img src={require('../assets/APropos-banner.png')} alt="banniere accueil"></img> 
+                    <img src={ AboutBanner } alt="banniere accueil"></img> 
                 </Banner>
                 <section className="collapse-list">
                     <Collapse 

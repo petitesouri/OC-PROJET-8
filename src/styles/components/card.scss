@@ -2,7 +2,8 @@
     width: 340px;
     height: 340px;
     color: white;
-   // box-shadow: inset 0px -92px 130px -45px black;
+    box-shadow: inset 0px -92px 130px -45px black;
+    background-size: cover;
     font-size: 18px;
     border-radius: 10px;
     display: flex;
@@ -15,6 +16,7 @@
         content-visibility: hidden;
     }
     &__title {
+        color: white;
         font-size: 18px;
         font-weight: 500;
     }

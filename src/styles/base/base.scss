@@ -5,7 +5,7 @@
     margin: 0;
 }
 body, header, footer, main, .page, .erreur404, .erreur404__section,
-.banner, .collapse-list, .collapse-up, .collapse-up__button {
+.banner, .collapse-list, .collapse-group,.collapse-group__down, .collapse__button, .logement-item {
     display: flex;
     flex-direction: column; 
 } 
@@ -19,7 +19,6 @@ body {
     margin: auto;
     .page {
         gap: 38px;
-        margin-top: 45px;
     }
     header, main {
         width: 1240px;
@@ -28,14 +27,10 @@ body {
         flex: 2 100vh;
     }
 }
-ul {
+ul, li {
     list-style-type: none;
     padding-inline-start: 0;
 }
 img {
     object-fit: contain;
-}
-button {
-    color: black;
-    background-color: blue;
 }

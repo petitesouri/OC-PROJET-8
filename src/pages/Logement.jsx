@@ -3,47 +3,47 @@ import useFetch from '../components/useFetch'
 
 import Card from "../components/Card";
 import Slideshow from "../components/Slideshow";
-{/*import Collapse from "../components/Collapse";
+import Collapse from "../components/Collapse";
 import Tags from "../components/Tags";
 import Host from "../components/Host";
-import Rating from "../components/Rating";*/}
+//import Rating from "../components/Rating";
 
 const Logement = () => {
     const { id } = useParams();
     const datasJson = useFetch();
-
+    const data = datasJson.find ( (cardById) => cardById.id === id );
+    
     return (
         <main className="page logement">
-            {datasJson.map ( (cardById) => (
-                <section className="logement-section" key={cardById.id} >
-                    {cardById.id === id ? 
-                        <div className="logement-item">
-                            <Slideshow 
-                            data={cardById.pictures}
-                            />
+            <section className="logement-section" key={id} >
+                {data ?
+                    <article className="logement-item">
+                    <Slideshow 
+                        data={data.pictures} />
+                    <div className="informations">
+                        <div className="informations__logement">
                             <Card 
-                                title={cardById.title} 
-                                location={cardById.location}                            
-                                /> 
-                            {/*<Tags tags={cardById.tags} />
-                            <Host 
-                                name={cardById.host.name}
-                                picture={cardById.host.picture}
-                                />
-                            <Rating 
-                                rating={cardById.rating}/>
+                                title={data.title} 
+                                location={data.location} /> 
+                            <Tags tags={data.tags} />
                             <Collapse 
                                 title="Description"
-                                paragraph= {cardById.description}
-                            />
+                                paragraph= {data.description} />
+                        </div>
+                        <div className="informations__host">
+                            <Host 
+                                name={data.host.name}
+                                picture={data.host.picture} />
+                            {/*<Rating 
+                                rating={data.rating}/>*/}
                             <Collapse 
                                 title="Equipements"
-                                paragraph= {cardById.equipments}
-                            />*/}
-                        </div> : null
-                    }
-                </section>
-            ))}
+                                paragraph= {data.equipments} />
+                        </div>
+                    </div>                            
+                </article> 
+                : null }
+            </section>
         </main>
     )
 }

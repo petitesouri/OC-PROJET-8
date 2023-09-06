@@ -1,7 +1,7 @@
 .collapse {
     background-color: $second-color;
     border-radius: 10px;
-    .collapse-up {
+    .collapse-group {
         height: 52px;
         background-color: $main-color;
         border-radius: 10px;
@@ -9,23 +9,24 @@
         justify-content: space-between;
         align-items: center;
         padding: 10px 20px 10px 15px;
-        h2 {
+        &__title {
             font-size: 24px;
             font-weight: 500;
+            margin: 0;
         }
         &__button {
-            background-color: $main-color;
+             background-color: $main-color;
             border: none;
         }
-    }
-    .collapse-down {
-        color: $main-color;
-        font-size: 18px;
-        font-weight: 400;
-        padding: 16px 20px 20px 20px;
-        margin: 0;
+        &__text {
+            color: $main-color;
+            font-size: 18px;
+            font-weight: 400;
+            padding: 16px 20px 20px 20px;
+            margin: 0;
+        }
     }
 }
-.collapse-up__button :active {
+.collapse-group__button :active {
         animation: rotate-button 150ms linear reverse;
 }

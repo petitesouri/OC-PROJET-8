@@ -6,9 +6,9 @@ const Card = (props) => {
           style= {{ backgroundImage:`url(${ props.cover })`}}
           >
       <div className="card__cover">{ props.cover }</div>
-      <div className="card__title">{ props.title }</div>
-      <div>{ props.location }</div>
-      <div>{ props.description }</div>     
+      <h2 className="card__title">{ props.title }</h2>
+      <p className="card__text">{ props.location }</p>
+      <p className="card__text">{ props.description }</p>     
       <div>{ props.children}</div>
     </article>
   )

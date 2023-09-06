@@ -9,7 +9,7 @@ const AdList = (props) => {
   return (
     <ul className='ad-list-container'>
       {datasJson.map((card) => ( 
-        <div key={card.id} onClick={() => (card.id)}>
+        <div key={card.id} >
           <Link to={`/Logement/${card.id}`}>
             <Card id={card.id} title={card.title} cover={card.cover}/>
           </Link>

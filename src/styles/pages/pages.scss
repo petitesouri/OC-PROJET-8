@@ -1,47 +1,89 @@
+.card--logement, .card__text {
+    color: $main-color;
+    margin: 0;
+}
+
 .logement {
     .logement-section {
+        margin-top: 50px;
         .logement-item {
-            .card--logement {
-                color: black;
-                background-image: none;
+            gap: 24px;
+            .informations {
+                display: flex;
+                justify-content: space-between;
+                &__logement {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .card--logement {
+                        height: 150px;
+                        box-shadow: none;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0;
+                        .card__title {
+                            color: $main-color;
+                            font-size: 36px;
+                        }
+                        .card__text {
+                            font-size: 18px;
+                        }
+                    }
+                    .tags {
+                        display: flex;
+                        gap: 10px;
+                        .tags-item {
+                            background-color: $main-color;
+                            border-radius: 10px;
+                        }
+                    }
+                }
+                &__host {
+                    .host {
+                        color: green;
+                        background-size: cover;
+                        .host-picture {
+                            content-visibility: hidden;
+                        }
+                    }
+                }
             }
             .carousel {
-                display: flex;
-                flex-direction: row;
-                //overflow: hidden;
+                height: 415px;
+                position: relative;
                 .carousel-pictures{ 
-                    img{
-                        height: 415px;
-                        border-radius: 25px;
-                        object-fit: cover;
-                    }
+                    width: 100%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    border-radius: 25px;
+                    object-fit: cover;
                 }
                 .carousel-pictures__hidden {
                     display: none;
                 }
                 .arrow{
-                    background-color:black;
                     position: absolute;
                 }
                 .arrow-left {
-                    left: 1rem;
-                    top: 500px;
+                    left: 23px;
+                    top: 160px;
                 }
                 .arrow-right {
-                    right: 1rem;
-                    top: 500px;
+                    right: 23px;
+                    top: 160px;
                 }
                 .indicator {
-                    width: 100px;
-                    height: 100px;
-                    color: black;
-                    background-color: blue;
-                    display: flex;
+                    font-size: 18px;
+                    color: white;
                     position: absolute;
-                    bottom: 100px;
-                    left: 700px;
+                    bottom: 25px;
+                    left: 607px;
                 }
             }
+        }
+        .collapse {
+            width: 582px;
         }
     }
 }
