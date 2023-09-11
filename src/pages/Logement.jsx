@@ -6,7 +6,7 @@ import Slideshow from "../components/Slideshow";
 import Collapse from "../components/Collapse";
 import Tags from "../components/Tags";
 import Host from "../components/Host";
-//import Rating from "../components/Rating";
+import Rating from "../components/Rating";
 
 const Logement = () => {
     const { id } = useParams();
@@ -18,30 +18,32 @@ const Logement = () => {
             <section className="logement-section" key={id} >
                 {data ?
                     <article className="logement-item">
-                    <Slideshow 
-                        data={data.pictures} />
-                    <div className="informations">
-                        <div className="informations__logement">
-                            <Card 
-                                title={data.title} 
-                                location={data.location} /> 
-                            <Tags tags={data.tags} />
+                        <Slideshow 
+                            data={data.pictures} />
+                        <div className="informations">
+                            <div className="informations__logement">
+                                <Card 
+                                    title={data.title} 
+                                    location={data.location} /> 
+                                <Tags tags={data.tags} />                            
+                            </div>
+                            <div className="informations__host">
+                                <Host 
+                                    name={data.host.name}
+                                    picture={data.host.picture} />
+                                <Rating 
+                                    rating={data.rating}/>                          
+                            </div>
+                        </div>  
+                        <div className="informations__description">
                             <Collapse 
-                                title="Description"
-                                paragraph= {data.description} />
-                        </div>
-                        <div className="informations__host">
-                            <Host 
-                                name={data.host.name}
-                                picture={data.host.picture} />
-                            {/*<Rating 
-                                rating={data.rating}/>*/}
+                                    title="Description"
+                                    description= {data.description} />
                             <Collapse 
-                                title="Equipements"
-                                paragraph= {data.equipments} />
-                        </div>
-                    </div>                            
-                </article> 
+                                    title="Equipements"
+                                    equipments= {data.equipments} />
+                        </div>                                            
+                    </article> 
                 : null }
             </section>
         </main>

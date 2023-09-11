@@ -1,9 +1,12 @@
-const Tags = (props) => {  
-    return (
-      <ul key={ props.id } className="tags">
-        <li className="tags-item">{ props.tags }</li>
-      </ul>
-    )
-  }
+const Tags = ({tags}) => {  
+  
+  return (
+    <ul key={ tags.id } className="tags">
+      {tags.map((tags, index) => (
+        <li key={ tags[index] } className="tags-item">{ tags }</li>
+      ))}    
+    </ul>
+  )
+}
   
   export default Tags;

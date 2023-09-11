@@ -8,46 +8,6 @@
         margin-top: 50px;
         .logement-item {
             gap: 24px;
-            .informations {
-                display: flex;
-                justify-content: space-between;
-                &__logement {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 20px;
-                    .card--logement {
-                        height: 150px;
-                        box-shadow: none;
-                        flex-direction: column;
-                        align-items: flex-start;
-                        padding: 0;
-                        .card__title {
-                            color: $main-color;
-                            font-size: 36px;
-                        }
-                        .card__text {
-                            font-size: 18px;
-                        }
-                    }
-                    .tags {
-                        display: flex;
-                        gap: 10px;
-                        .tags-item {
-                            background-color: $main-color;
-                            border-radius: 10px;
-                        }
-                    }
-                }
-                &__host {
-                    .host {
-                        color: green;
-                        background-size: cover;
-                        .host-picture {
-                            content-visibility: hidden;
-                        }
-                    }
-                }
-            }
             .carousel {
                 height: 415px;
                 position: relative;
@@ -81,9 +41,76 @@
                     left: 607px;
                 }
             }
-        }
-        .collapse {
-            width: 582px;
+            .informations {
+                flex-direction: row;
+                &__logement {
+                    width: 50%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 20px;
+                    .card--logement {
+                        height: 150px;
+                        box-shadow: none;
+                        flex-direction: column;
+                        align-items: flex-start;
+                        padding: 0;
+                        .card__title {
+                            color: $main-color;
+                            font-size: 36px;
+                        }
+                        .card__text {
+                            font-size: 18px;
+                        }
+                    }
+                    .tags {
+                        width: 100%;
+                        flex-direction: row;
+                        justify-content: flex-start;
+                        gap: 10px;
+                        margin: 0;
+                        .tags-item {
+                            width: 115px;
+                            height: 25px;
+                            font-size: 14px;
+                            color: white;
+                            background-color: $main-color;
+                            border-radius: 10px;
+                            display: flex;
+                            justify-content: center;
+                            align-items: center;
+                        }
+                    }
+                }
+                &__host {
+                    width: 50%;
+                    .host {
+                        color: $main-color;
+                        background-size: cover;
+                        flex-direction: row-reverse;
+                        align-items: center;
+                        .host-picture {
+                            width: 64px;
+                            border-radius: 100px;
+                        }
+                    }
+                }
+                &__description {
+                    flex-direction: row;
+                    gap: 76px;
+                    .collapse {
+                        width: 582px;
+                    }
+                }
+            }            
         }
     }
 }
+.divStars{
+    width: 100%;
+    background-color: black;
+
+}
+//.stars {
+ //   width: 196px;
+//    height: 36px;
+//}

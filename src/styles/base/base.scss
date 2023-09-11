@@ -5,7 +5,9 @@
     margin: 0;
 }
 body, header, footer, main, .page, .erreur404, .erreur404__section,
-.banner, .collapse-list, .collapse-group,.collapse-group__down, .collapse__button, .logement-item {
+.banner, .collapse-list, .collapse-group,.collapse-group__down, .collapse__button,
+.logement-item, .informations, .informations__logement, .informations__host, .host,
+.informations__description, .tags {
     display: flex;
     flex-direction: column; 
 } 
