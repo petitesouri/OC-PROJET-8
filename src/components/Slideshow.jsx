@@ -13,14 +13,16 @@ const Slideshow = ({data}) => {
     const prevSlide = () => {
         setSlide(slide === 0 ? data.length -1 : slide - 1)
     }
-
+    
     return (
         <article className="carousel">
-            <img className="arrow arrow-left" 
+            {data.length !== 1 ? (
+                <img className="arrow arrow-left" 
                     src={ ArrowLeft } 
                     alt="arrow-left" 
                     onClick={prevSlide}>
-            </img>
+                </img> 
+            ):null}              
             <div className="carousel-pictures">
                 {data.map((picture, index) => {  
                     return (
@@ -33,11 +35,13 @@ const Slideshow = ({data}) => {
                     )   
                 })}
             </div>
-            <img className="arrow arrow-right" 
-                    src={ ArrowRight } 
-                    alt="arrow-right" 
-                    onClick={nextSlide}>
-            </img>
+            {data.length !== 1 ? (
+                <img className="arrow arrow-right" 
+                        src={ ArrowRight } 
+                        alt="arrow-right" 
+                        onClick={nextSlide}>
+                </img>
+            ) :null}
             <span className='indicator'>{slide+1}/{data.length}</span>            
         </article> 
     )

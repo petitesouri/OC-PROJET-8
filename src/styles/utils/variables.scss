@@ -1,3 +1,8 @@
 $main-color: #FF6060;
 $second-color:#F6F6F6;
 $avatar-color:#C4C4C4;
+
+$breakpoints: (
+    tablet-min:820px,
+    tablet-max:1023px,
+    mobile-max:819px);

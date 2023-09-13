@@ -1,64 +1,24 @@
-.card--logement, .card__text {
-    color: $main-color;
-    margin: 0;
-}
-
 .logement {
     .logement-section {
         margin-top: 50px;
         .logement-item {
             gap: 24px;
-            .carousel {
-                height: 415px;
-                position: relative;
-                .carousel-pictures{ 
-                    width: 100%;
-                    height: 100%;
-                    display: flex;
-                    flex-direction: row;
-                    border-radius: 25px;
-                    object-fit: cover;
-                }
-                .carousel-pictures__hidden {
-                    display: none;
-                }
-                .arrow{
-                    position: absolute;
-                }
-                .arrow-left {
-                    left: 23px;
-                    top: 160px;
-                }
-                .arrow-right {
-                    right: 23px;
-                    top: 160px;
-                }
-                .indicator {
-                    font-size: 18px;
-                    color: white;
-                    position: absolute;
-                    bottom: 25px;
-                    left: 607px;
-                }
-            }
-            .informations {
-                flex-direction: row;
+            .informations {               
                 &__logement {
                     width: 50%;
-                    display: flex;
-                    flex-direction: column;
                     gap: 20px;
-                    .card--logement {
-                        height: 150px;
+                    .card {
+                        width: 100%;
+                        height: auto;
                         box-shadow: none;
-                        flex-direction: column;
                         align-items: flex-start;
                         padding: 0;
-                        .card__title {
+                        &__title {
                             color: $main-color;
                             font-size: 36px;
                         }
-                        .card__text {
+                        &__text {
+                            color: $main-color;
                             font-size: 18px;
                         }
                     }
@@ -67,50 +27,54 @@
                         flex-direction: row;
                         justify-content: flex-start;
                         gap: 10px;
-                        margin: 0;
                         .tags-item {
-                            width: 115px;
+                            width: auto;
                             height: 25px;
                             font-size: 14px;
-                            color: white;
-                            background-color: $main-color;
-                            border-radius: 10px;
-                            display: flex;
+                            border-radius: 10px;                           
                             justify-content: center;
                             align-items: center;
+                            padding: 3px 41px 2px 40px;
                         }
                     }
                 }
                 &__host {
                     width: 50%;
+                    gap: 21px;
                     .host {
-                        color: $main-color;
                         background-size: cover;
                         flex-direction: row-reverse;
                         align-items: center;
+                        gap: 10px;                        
                         .host-picture {
                             width: 64px;
                             border-radius: 100px;
+                        }
+                        .host-figcaption {
+                            width: 93px;
+                            text-align: end;
+                        }
+                    }
+                    .divStars {    
+                        flex-direction: row;
+                        justify-content: center;
+                        .stars {
+                            width: 36px;
+                            height: 36px;
+                            overflow: visible;
                         }
                     }
                 }
                 &__description {
                     flex-direction: row;
-                    gap: 76px;
+                    justify-content: space-between;
+                    align-items: center;
+                    gap: 76px;                    
                     .collapse {
-                        width: 582px;
-                    }
+                        width: 582px;                        
+                    }                    
                 }
             }            
         }
     }
 }
-.divStars{
-    width: 100%;
-    background-color: black;
-
-}
-//.stars {
- //   width: 196px;
-//    height: 36px;
-//}

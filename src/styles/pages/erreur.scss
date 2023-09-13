@@ -5,12 +5,7 @@
     &__section {
         align-items: center;
         gap: 139px;
-        h2, p {
-            color: $main-color;
-            margin: 0;
-        }
         a {
-            font-size: 18px;
             text-decoration: underline;
         }   
     }

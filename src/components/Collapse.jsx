@@ -1,47 +1,47 @@
 import { useState } from 'react';
 
 import ArrowUp from '../assets/arrow-up.png'
-import ArrowDown from '../assets/arrow-down.png'
 
 const Collapse = (props) => {
-    const [isOpen, setIsOpen] = useState(false);
-    
+    const [open, setOpen] = useState(true);
+    const toggle = () => {
+        setOpen(!open);
+    }
+
+    let classNameButton = 'collapse-button'
+    let classNameDescription = 'collapse-description'
+    let classNameText = 'collapse-description__text'
+    let classNameList = 'collapse-description__list'
+
+    if (!open) {
+        classNameButton += ' open';
+        classNameDescription += ' open';
+        classNameText += ' open';
+        classNameList += ' open';
+    }
 
     return (
-        <article className='collapse' onClick={() => setIsOpen(!isOpen)}>
-            { isOpen ? (
-                <hgroup className='collapse-group'>
-                    <h2 className='collapse-group__title'>{ props.title }</h2>
-                    <button className='collapse-group__button'>
-                        <img className="arrow" src={ ArrowUp } alt="arrow"></img>
-                    </button>
-                </hgroup>
-            )
-            : ( 
-                <hgroup className='collapse-group'>
-                    <h2 className='collapse-group__title'>{ props.title }</h2>
-                    <button className='collapse-group__button'>
-                        <img className="arrow" src={ ArrowDown } alt="arrow"></img>
-                    </button> 
-                </hgroup>                 
-                )
-            }
-            {isOpen && 
-                <div>
-                    {props.title === "Description" ? (
-                        <p className='collapse-group__text'>
-                            {props.description}
-                        </p>
-                    ):(
-                        <ul className='collapse-group__list'>
-                            {props.equipments.map((equipment, index) => (
-                                <li key={index}>{ equipment} </li>
-                            ))}
-                        </ul>
-                    )}
-                </div>
-            }                  
-        </article> 
+        <article className='collapse'>
+            <hgroup className='collapse-group' onClick={toggle}>
+                <h2 className='collapse-group__title'>{ props.title }</h2>
+                <button className={classNameButton} 
+                    style={{ backgroundImage:`url(${ ArrowUp })`}}>       
+                </button>
+            </hgroup>
+            {props.title === "Equipements" ? (  
+                <ul className={classNameDescription}>
+                    {props.equipments.map((equipment, index) => (
+                        <li key={index} className={classNameList}>{ equipment} </li>
+                    ))}
+                </ul>
+            ):(
+                <div className={classNameDescription}>
+                    <div className={classNameText}>
+                        {props.description}
+                    </div>
+                </div>                    
+            )} 
+        </article>
     )
 }
 

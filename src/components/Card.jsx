@@ -2,7 +2,7 @@ const Card = (props) => {
   return (
     <article 
           key={ props.id }
-          className="card card--logement" 
+          className="card" 
           style= {{ backgroundImage:`url(${ props.cover })`}}
           >
       <div className="card__cover">{ props.cover }</div>

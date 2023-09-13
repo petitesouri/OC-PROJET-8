@@ -11,13 +11,13 @@ import Footer from './components/Footer';
 function App() {
   return (
     <BrowserRouter>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Accueil/>} />
-        <Route path="/Apropos" element={<APropos/>} />
-        <Route path="/Logement/:id" element={<Logement/>}/>
-        <Route path="*" element={<Erreur/>} />
-      </Routes>
+      <Header />      
+        <Routes>          
+            <Route path="/" element={<Accueil/>} />
+            <Route path="/Apropos" element={<APropos/>} /> 
+            <Route path="/Logement/:id" element={<Logement/>} />                    
+            <Route path="*" element={<Erreur/>} />
+        </Routes>      
       <Footer />
     </BrowserRouter>
   );

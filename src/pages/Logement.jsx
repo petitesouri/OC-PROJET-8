@@ -1,5 +1,5 @@
-import { useParams } from "react-router-dom";
-import useFetch from '../components/useFetch'
+import { useNavigate, useParams } from "react-router-dom";
+import useFetch from '../components/useFetch';
 
 import Card from "../components/Card";
 import Slideshow from "../components/Slideshow";
@@ -12,11 +12,16 @@ const Logement = () => {
     const { id } = useParams();
     const datasJson = useFetch();
     const data = datasJson.find ( (cardById) => cardById.id === id );
-    
-    return (
+    const navigate = useNavigate()
+    if(!data){
+        navigate('/404')
+        return null;
+    }
+
+    return (   
         <main className="page logement">
             <section className="logement-section" key={id} >
-                {data ?
+                {data ? 
                     <article className="logement-item">
                         <Slideshow 
                             data={data.pictures} />
@@ -34,7 +39,7 @@ const Logement = () => {
                                 <Rating 
                                     rating={data.rating}/>                          
                             </div>
-                        </div>  
+                        </div> 
                         <div className="informations__description">
                             <Collapse 
                                     title="Description"
@@ -42,12 +47,12 @@ const Logement = () => {
                             <Collapse 
                                     title="Equipements"
                                     equipments= {data.equipments} />
-                        </div>                                            
+                        </div>                                           
                     </article> 
                 : null }
             </section>
         </main>
-    )
+    )   
 }
 
 export default Logement;

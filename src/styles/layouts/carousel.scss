@@ -1,0 +1,30 @@
+.carousel {
+    height: 415px;
+    position: relative;
+    .carousel-pictures{ 
+        width: 100%;
+        height: 100%;
+        flex-direction: row;
+        border-radius: 25px;
+        object-fit: cover;
+    }
+    .carousel-pictures__hidden {
+        display: none;
+    }
+    .arrow{
+        position: absolute;
+    }
+    .arrow-left {
+        left: 23px;
+        top: 160px;
+    }
+    .arrow-right {
+        right: 23px;
+        top: 160px;
+    }
+    .indicator {
+        position: absolute;
+        bottom: 25px;
+        left: 607px;
+    }
+}

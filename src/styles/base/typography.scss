@@ -5,8 +5,15 @@ body, h1 {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500;
 }
-h1, h2, p{
+h1, h2, p, .indicator, .tags-item {
     color: white;
+    margin: 0;
+}
+a, .host, .collapse-group__button, .collapse-description__text, .collapse-description__list,
+ .erreur404__section h2, .erreur404__section p
+  {
+    color: $main-color;
+    margin: 0;
 }
 h1 {    
     font-size: 48px;
@@ -16,14 +23,21 @@ h2 {
     font-size: 185px;
     font-weight: 700;
 }
+.erreur404__section h2 {
+    font-size: 288px;
+}
 p {
     font-size: 36px;
 }
-a{
-    color: $main-color;
+.collapse-group__title, a, footer p {
     font-size: 24px;
+}
+.indicator, .collapse-description__text, .collapse-description__list, 
+.erreur404__section a, .host-figcaption {
+    font-size: 18px;
+}
+a{
     text-decoration: none;
-    margin: 0;
     &:active {
         text-decoration: underline;
     }

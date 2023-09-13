@@ -3,7 +3,7 @@ const Host = (props) => {
       <figure key={ props.id }
             className="host">
         <img className="host-picture" src={ props.picture } alt={ props.name }></img>
-        <figcaption>{ props.name }</figcaption>
+        <figcaption className="host-figcaption">{ props.name }</figcaption>
       </figure>
     )
   }

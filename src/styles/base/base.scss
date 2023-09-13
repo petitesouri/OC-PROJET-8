@@ -1,24 +1,21 @@
 * { 
     box-sizing: border-box;   
 }
-#root {
+#root, .collapse-group__title, .nav, .tags {
     margin: 0;
 }
-body, header, footer, main, .page, .erreur404, .erreur404__section,
-.banner, .collapse-list, .collapse-group,.collapse-group__down, .collapse__button,
-.logement-item, .informations, .informations__logement, .informations__host, .host,
-.informations__description, .tags {
-    display: flex;
-    flex-direction: column; 
-} 
 body, header, main {
     margin: auto;
+} 
+.tags-item, .collapse-group, .collapse-button {
+    background-color: $main-color;
+}
+.ad-list-container, .collapse {
+    background-color: $second-color;
 }
 body {
     max-width: 1440px;
     background-color: white;
-    justify-content: center;
-    margin: auto;
     .page {
         gap: 38px;
     }
@@ -35,4 +32,18 @@ ul, li {
 }
 img {
     object-fit: contain;
+}
+
+body, header, footer, main, .page, .erreur404, .erreur404__section, .card,
+.banner, .collapse-list, .collapse-group, .carousel-pictures,.logement-item, 
+.informations, .informations__logement, .informations__host, .host,
+.informations__description, .tags, .tags-item, .divStars {
+    display: flex;
+    flex-direction: column; 
+}
+.informations {
+    flex-direction: row;
+}
+body {
+    justify-content: center;
 }
