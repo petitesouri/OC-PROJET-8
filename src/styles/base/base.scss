@@ -10,7 +10,7 @@ body, header, main {
 .tags-item, .collapse-group, .collapse-button {
     background-color: $main-color;
 }
-.ad-list-container, .collapse {
+.ad-list-container {
     background-color: $second-color;
 }
 body {
@@ -29,6 +29,8 @@ body {
 ul, li {
     list-style-type: none;
     padding-inline-start: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
 }
 img {
     object-fit: contain;

@@ -40,6 +40,7 @@
                 }
                 &__host {
                     width: 50%;
+                    align-items: flex-end;
                     gap: 21px;
                     .host {
                         background-size: cover;
@@ -55,24 +56,35 @@
                             text-align: end;
                         }
                     }
-                    .divStars {    
+                    .divStars {   
                         flex-direction: row;
-                        justify-content: center;
-                        .stars {
-                            width: 36px;
-                            height: 36px;
-                            overflow: visible;
+                        align-items: center;
+                        gap: 12px;
+                        .fa-star {
+                            font-size: 30px;
+                        }
+                        .fa-active {
+                            color: #FF6060;
+                        }
+                        .fa-inactive {
+                            color: #E3E3E3;
                         }
                     }
                 }
                 &__description {
                     flex-direction: row;
                     justify-content: space-between;
-                    align-items: center;
-                    gap: 76px;                    
+                    gap: 76px;
                     .collapse {
-                        width: 582px;                        
-                    }                    
+                        width: 582px;
+                    }
+                    .collapse.open {
+                        height: 230px;
+                        margin-bottom: 0;
+                        .collapse-description.open {
+                            height: 100%;
+                        }
+                    }                                       
                 }
             }            
         }

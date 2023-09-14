@@ -5,7 +5,7 @@ const Rating = (props) => {
     const mapStars = [];
 
     for(let i = 0; i < 5; i++){
-        mapStars[i] = <FontAwesomeIcon icon={faStar} className={i < props.rating ? "fa-active" : "fa-inactive"} />
+        mapStars[i] = <FontAwesomeIcon icon={faStar} key={i} className={i < props.rating ? "fa-active" : "fa-inactive"} />
     }
 
     // const mapStars = arrayStars.map((star, index) => (    

@@ -8,39 +8,27 @@ const Collapse = (props) => {
         setOpen(!open);
     }
 
-    let classNameButton = 'collapse-button'
-    let classNameDescription = 'collapse-description'
-    let classNameText = 'collapse-description__text'
-    let classNameList = 'collapse-description__list'
-
-    if (!open) {
-        classNameButton += ' open';
-        classNameDescription += ' open';
-        classNameText += ' open';
-        classNameList += ' open';
-    }
-
     return (
-        <article className='collapse'>
+        <article className={open ? "collapse" : "collapse open" }>
             <hgroup className='collapse-group' onClick={toggle}>
                 <h2 className='collapse-group__title'>{ props.title }</h2>
-                <button className={classNameButton} 
+                <button className={open ? "collapse-button" : "collapse-button open" } 
                     style={{ backgroundImage:`url(${ ArrowUp })`}}>       
                 </button>
             </hgroup>
-            {props.title === "Equipements" ? (  
-                <ul className={classNameDescription}>
-                    {props.equipments.map((equipment, index) => (
-                        <li key={index} className={classNameList}>{ equipment} </li>
-                    ))}
-                </ul>
-            ):(
-                <div className={classNameDescription}>
-                    <div className={classNameText}>
+            <div className={open ? "collapse-description" : "collapse-description open" }>
+                {props.title === "Equipements" ? (  
+                    <ul className={open ? "collapse-description__list" : "collapse-description__list open" }>
+                        {props.equipments.map((equipment, index) => (
+                            <li key={index}>{ equipment} </li>
+                        ))}
+                    </ul>
+                ):(
+                    <div className={open ? "collapse-description__text" : "collapse-description__text open" }>
                         {props.description}
-                    </div>
-                </div>                    
-            )} 
+                    </div>                                    
+                )}
+            </div>
         </article>
     )
 }
