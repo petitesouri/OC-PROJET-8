@@ -9,8 +9,8 @@ const AdList = (props) => {
   return (
     <ul className='ad-list-container'>
       {datasJson.map((card) => ( 
-        <div key={card.id} className="ad-list-item">
-          <Link to={`/Logement/${card.id}`}  className="item">
+        <div key={card.id}>
+          <Link to={`/Logement/${card.id}`}>
             <Card id={card.id} title={card.title} cover={card.cover}/>
           </Link>
         </div>

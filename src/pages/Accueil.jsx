@@ -5,12 +5,12 @@ import HomeBanner from '../assets/Home-banner.jpg';
 
 const Accueil = () => {
     return (
-            <main className="page home">
-                <Banner title="Chez vous, partout et ailleurs">  
-                    <img src={HomeBanner} alt="banniere accueil"></img>
-                </Banner>
-                <AdList />
-            </main>
+        <main className="page home">
+            <Banner title="Chez vous, partout et ailleurs">  
+                <img src={HomeBanner} alt="banniere accueil"></img>
+            </Banner>
+            <AdList />
+        </main>
     )
 }
 

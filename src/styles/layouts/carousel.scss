@@ -1,30 +1,51 @@
 .carousel {
     height: 415px;
     position: relative;
+    @include mobile {
+        height: 255px;
+    }
     .carousel-pictures{ 
         width: 100%;
         height: 100%;
         flex-direction: row;
         border-radius: 25px;
         object-fit: cover;
+        @include mobile {
+            border-radius: 10px;
+        }
     }
     .carousel-pictures__hidden {
         display: none;
     }
     .arrow{
         position: absolute;
+        @include mobile {
+            width: 24px;
+            height: 24px;
+        }
     }
     .arrow-left {
         left: 23px;
         top: 160px;
+        @include mobile {
+            left: 0;
+            top: 50%;
+        }
     }
     .arrow-right {
         right: 23px;
         top: 160px;
+        @include mobile {
+            right: 0;
+            top: 50%;
+        }
     }
     .indicator {
         position: absolute;
-        bottom: 25px;
-        left: 607px;
+        bottom: 21px;
+        left: 50%; 
+        @include mobile {
+            display: none;
+        }
     }
 }

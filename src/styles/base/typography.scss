@@ -16,32 +16,30 @@ a, .host, .collapse-group__button, .collapse-description__text, .collapse-descri
     margin: 0;
 }
 h1 {    
-    font-size: 48px;
-    letter-spacing: 10px;
+    font-size: 3rem;
+    letter-spacing: 0.625rem;
+    @include mobile {
+        font-size: 1.5rem;     
+        letter-spacing: normal; 
+    }
 }
 h2 {
-    font-size: 185px;
+    font-size: 11.56rem;
     font-weight: 700;
 }
-.erreur404__section h2 {
-    font-size: 288px;
-}
 p {
-    font-size: 36px;
+    font-size: 2.25rem;
 }
 .collapse-group__title, a, footer p {
-    font-size: 24px;
+    font-size: 1.5rem;
+    @include mobile {
+        font-size: 0.75rem;  
+    }
 }
 .indicator, .collapse-description__text, .collapse-description__list, 
 .erreur404__section a, .host-figcaption {
-    font-size: 18px;
+    font-size: 1.125rem;
 }
 a{
     text-decoration: none;
-    &:active {
-        text-decoration: underline;
-    }
-    img{
-        height: 64px;
-    }
 }

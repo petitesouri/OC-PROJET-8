@@ -1,13 +1,29 @@
 .header {
-    flex: 1 68px;
+    height: 68px;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    margin-top: 45px;
+    margin: 45px auto 0 auto;
+    @include mobile {
+        height: 47px;
+        margin-top: 20px;
+    }
+    .logo {
+        width: 13.125rem;
+        height: 4.25rem;  
+        @include mobile {
+            width: 9.06rem;
+            height: 2.93rem;
+        }     
+    }
     .nav{
-        a{
-            margin-left: 50px;
-        }
+            a{
+                margin-left: 3.125rem;
+                text-decoration: none;
+                @include mobile {
+                    margin-left: 1.625rem;  
+                }
+            }
         a.active {
             text-decoration: underline;
         }
