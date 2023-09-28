@@ -36,13 +36,15 @@ const Slideshow = ({data}) => {
                 })}
             </div>
             {data.length !== 1 ? (
-                <img className="arrow arrow-right" 
-                        src={ ArrowRight } 
-                        alt="arrow-right" 
-                        onClick={nextSlide}>
-                </img>
-            ) :null}
-            <span className='indicator'>{slide+1}/{data.length}</span>            
+                <div>
+                    <img className="arrow arrow-right" 
+                            src={ ArrowRight } 
+                            alt="arrow-right" 
+                            onClick={nextSlide}>
+                    </img>
+                    <span className='indicator'>{slide+1}/{data.length}</span>
+                </div>
+            ) :null}              
         </article> 
     )
 }
