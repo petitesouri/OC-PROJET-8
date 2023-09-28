@@ -9,7 +9,7 @@ const Erreur = () => {
                         {window.innerWidth < 820 ? (
                             <p className="erreur404__text">Oups! La page que < br/>vous demandez n'existe pas.</p>
                             ):(
-                                <p className="erreur404__text">Oups! La page que vous demandez n'existe pas.</p>
+                            <p className="erreur404__text">Oups! La page que vous demandez n'existe pas.</p>
                             )} 
                     </div>                                                             
                     <Link to="/">

@@ -13,7 +13,7 @@ function useFetch() {
           setLoading(true);
       }
       fetchData();
-  }, [loading])
+    }, [loading])
   
     return ( data)
 }  

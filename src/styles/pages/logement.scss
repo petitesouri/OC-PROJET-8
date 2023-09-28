@@ -56,6 +56,7 @@
                             padding: 3px 41px 2px 40px;
                             @include mobile {
                                 font-size: 10px;
+                                min-width: 84px;
                             }
                         }
                     }
@@ -121,12 +122,16 @@
                     margin: 4px auto 10px auto;
                     @include mobile {
                         flex-direction: column;
+                        max-width: max-content;
                         gap: 20px;
+                        align-items: flex-start;
+                        margin: 0;
                     }
                     .collapse {
-                        width: 582px;
+                        width: 36.375rem;
                         @include mobile{
-                            width: 335px;
+                            min-width: 280px;
+                            max-width: 98%;
                         }
                     }
                     .collapse.open {
@@ -140,9 +145,4 @@
             }            
         }
     }
-    //.footer {
-    //    @include mobile {
-    //        margin-top: 17px;
-    //    }
-    //}
 }

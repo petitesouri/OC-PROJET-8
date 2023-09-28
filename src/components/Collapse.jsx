@@ -17,17 +17,9 @@ const Collapse = (props) => {
                 </button>
             </hgroup>
             <div className={open ? "collapse-description" : "collapse-description open" }>
-                {props.title === "Equipements" ? (  
-                    <ul className={open ? "collapse-description__list" : "collapse-description__list open" }>
-                        {props.equipments.map((equipment, index) => (
-                            <li key={index}>{ equipment} </li>
-                        ))}
-                    </ul>
-                ):(
-                    <div className={open ? "collapse-description__text" : "collapse-description__text open" }>
-                        {props.description}
-                    </div>                                    
-                )}
+                <div className={open ? "collapse-description__text" : "collapse-description__text open" }>
+                    {props.children}
+                </div>                                    
             </div>
         </article>
     )

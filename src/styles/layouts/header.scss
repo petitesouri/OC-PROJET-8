@@ -17,11 +17,17 @@
         }     
     }
     .nav{
+        @include mobile {
+            text-transform: uppercase;
+            justify-content: flex-end;
+            display: flex;
+        }
             a{
                 margin-left: 3.125rem;
                 text-decoration: none;
                 @include mobile {
-                    margin-left: 1.625rem;  
+                    margin-left: 1.1rem;
+                    font-size: 0.625rem;  
                 }
             }
         a.active {

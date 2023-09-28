@@ -5,8 +5,3 @@
         @content;     
     }
 }
-/*@mixin tablet{
-    @media screen and (min-width: map-get($map: $breakpoints, $key:tablet-min)) and (max-width: map-get($map: $breakpoints, $key:tablet-max)){
-        @content;     
-    }
-}*/

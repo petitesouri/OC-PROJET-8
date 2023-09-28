@@ -6,6 +6,6 @@ const Host = (props) => {
         <figcaption className="host-figcaption">{ props.name }</figcaption>
       </figure>
     )
-  }
+}
   
-  export default Host;
+export default Host;

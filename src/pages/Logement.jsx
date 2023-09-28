@@ -1,4 +1,4 @@
-import { useNavigate, useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import useFetch from '../components/useFetch';
 
 import Card from "../components/Card";
@@ -7,16 +7,11 @@ import Collapse from "../components/Collapse";
 import Tags from "../components/Tags";
 import Host from "../components/Host";
 import Rating from "../components/Rating";
+import Erreur from "./Erreur404";
 
 const Logement = () => {
     const { id } = useParams();
-    const datasJson = useFetch();
-    const data = datasJson.find ( (cardById) => cardById.id === id );
-    const navigate = useNavigate()
-    if(!data){
-        navigate('/404')
-        return null;
-    }
+    const data = useFetch().find ( cardById => cardById.id === id );
 
     return (   
         <main className="page logement">
@@ -41,15 +36,20 @@ const Logement = () => {
                             </div>
                         </div> 
                         <div className="informations__description">
-                            <Collapse 
-                                    title="Description"
-                                    description= {data.description} />
-                            <Collapse 
-                                    title="Equipements"
-                                    equipments= {data.equipments} />
+                            <Collapse title="Description">
+                                {data.description}
+                            </Collapse>
+                            <Collapse title="Equipements"
+                                    equipments= {data.equipments} >
+                                <ul>
+                                    {data.equipments.map(equipment => (
+                                        <li key={equipment}>{equipment}</li>
+                                    ))}
+                                </ul>
+                            </Collapse>
                         </div>                                           
                     </article> 
-                : null }
+                : <Erreur /> }
             </section>
         </main>
     )   
